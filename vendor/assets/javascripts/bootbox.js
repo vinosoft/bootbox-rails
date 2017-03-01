@@ -664,7 +664,11 @@
     */
 
     dialog.on("shown.bs.modal", function() {
-      dialog.find(".btn-primary:first").focus();
+      if (dialog.find('[autofocus]').length) {
+        dialog.find("[autofocus]:first").focus();
+      } else {
+        dialog.find(".btn-primary:first").focus();
+      }
     });
 
     /**
