@@ -665,7 +665,7 @@
 
     dialog.on("shown.bs.modal", function() {
       if (dialog.find('[autofocus]').length) {
-        dialog.find("[autofocus]:first").focus();
+        dialog.find("[autofocus]:first").select();
       } else {
         dialog.find(".btn-primary:first").focus();
       }
